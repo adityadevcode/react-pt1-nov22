@@ -1,5 +1,7 @@
 // import React, { Component } from 'react';
 
+// const { render } = require("@testing-library/react");
+
 // class Sample extends Component {
 //     state = {
 //         count:0,
@@ -257,6 +259,14 @@
 // }
 
 // export default Sample;
+
+import React from 'react'
+
+export default function Sample() {
+  return (
+    <div>Sample</div>
+  )
+}
 
 
 
