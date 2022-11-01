@@ -1,6 +1,7 @@
 import Home from "./Components/Home";
 import Technologies from "./Components/Technologies";
 import Sample from "./Components/Sample";
+import FetchApi from "./Components/FetchApi";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       {/* props below */}
       {/* <Sample name="JavaScript" /> */}
       <Sample />
+      <FetchApi />
     </div>
   );
 }
