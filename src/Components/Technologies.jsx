@@ -160,3 +160,33 @@ import { isDOMComponent, scryRenderedComponentsWithType } from "react-dom/test-u
 
 //npm install expo
 //expo init my-app
+
+/////////////////////////////////
+// useState hook
+
+// //when we are using class component we have faced side affects
+// to over this issue function hooks were introduced
+// -when we deal with state we use useState
+
+import React, {useState} from "react";
+
+function Technologies() {
+  const[count,setCount] = useState(0);
+
+  const btnClick = ()=> {
+    console.log("hi");
+    // count++ we should not update state directly
+   //we can get count variable then add +1 so this one will not update state value directly
+    setCount(count + 1);
+    console.log('count: ', count)
+  }
+
+  return (
+    <div>
+      <button onClick = {btnClick} >Increment</button>
+      <h1>{count}</h1>
+    </div>
+  );
+}
+
+export default Technologies;
