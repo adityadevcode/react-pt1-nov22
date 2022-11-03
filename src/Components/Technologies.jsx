@@ -1,5 +1,6 @@
-// import React from 'react'
+d// import React from 'react'
 
+import { renderHook } from "@testing-library/react"
 import { isDOMComponent, scryRenderedComponentsWithType } from "react-dom/test-utils"
 
 // export default function Technologies() {
@@ -168,25 +169,203 @@ import { isDOMComponent, scryRenderedComponentsWithType } from "react-dom/test-u
 // to over this issue function hooks were introduced
 // -when we deal with state we use useState
 
-import React, {useState} from "react";
+// import React, {useState} from "react";
 
-function Technologies() {
-  const[count,setCount] = useState(0);
+// function Technologies() {
+//   const[count,setCount] = useState(0);
 
-  const btnClick = ()=> {
-    console.log("hi");
-    // count++ we should not update state directly
-   //we can get count variable then add +1 so this one will not update state value directly
-    setCount(count + 1);
-    console.log('count: ', count)
-  }
+//   const btnClick = ()=> {
+//     console.log("hi");
+//     // count++ we should not update state directly
+//    //we can get count variable then add +1 so this one will not update state value directly
+//     setCount(count + 1);
+//     console.log('count: ', count)
+//   }
 
-  return (
-    <div>
-      <button onClick = {btnClick} >Increment</button>
-      <h1>{count}</h1>
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <button onClick = {btnClick} >Increment</button>
+//       <h1>{count}</h1>
+//     </div>
+//   );
+// }
 
-export default Technologies;
+// export default Technologies;
+
+///////
+// Custom hook
+// hooks will support in functional component because functional
+// component we dont state or lifecycle methods
+// -to achieve above things in fun comp we use hooks
+// -in project folder we need to create nwe folders hooks
+// -new folder (hook)-newfile label-newfile label.hook.js 
+// -label in chat to see user is available or not
+
+// import React, {useState} from 'react';
+
+// const useLabel =() => {
+//  const [lable,setLable] =useState('') //('') state is empty
+  
+//  const updateLabel = () => {
+//   setLabel("Hi")
+//  }
+ 
+//  return [label,updateLable]
+// }
+
+// export default useLabel;
+
+// //real time scenarios for custom hook
+// multiple api calls 
+// we can use same logic and update  logic in multiple places
+// we can check online chatiing whether user is oneline or not
+
+//label-hook.js
+// import React, {useEffect, useState} from 'react';
+
+// const useLabel = (initialValue) => {
+//     const [label, setLable] =useState(initialValue);
+// //label means text
+//     const updateLable =(text) => {
+//         console.log('text:', text)
+//         setLable(text)
+//     }
+//     return[label,updataLable]
+// }
+
+// export default useLabel;
+
+// //app,js
+// function App() {
+//     const [label,setLabel] =useLabel("");
+//     //below we are writing component did mount
+//     useEffect(()=> {
+//         setLable("welcome")
+//     }, [])
+
+//     return(
+//         <div>
+//         <h3>custom hook</h3>
+//         <span>{label}</span>
+//         </div>
+//     );
+// }
+
+// export default App;
+
+////////////////////
+// Events:
+// button component we are binding an event
+// folder for all commons things we can create common folder
+// -components-common-buttons
+// -file name button.component.js
+// -file name button.component.css 
+
+// import React from 'react';
+// import './button.component.css';
+
+// const Buttoncomponent =() => {
+//     const clickEventHandler = (event, data) => {
+//         console.log('Event:', event)
+//         console.log("Button Clicked", data)
+//     }
+
+//     return <button onClick={(event)=>{clickEventHandler(event, "hello")}}>Button</button>
+
+// }
+// export default ButtonComponent;
+
+// //app.js
+// import ButtonComponent from './components/common/button/button.component';
+
+// return(
+//     <div>
+//     <ButtonComponent />
+//     </div>
+// );
+// }
+
+// export default App;
+
+//alternate approach we are adding clickeventhandler in app.js using thorugh props
+
+// //app.js
+// import ButtonComponent from './components/common/button/button.component';
+
+// function App() {
+
+    // const clickEventHandler = (event, data) => {
+        //         console.log('Event:', event)
+        //         console.log("Button Clicked", data)
+        //     }
+        
+// return(
+//     <div>
+//     <ButtonComponent clickEventHandler={clickEventHandler} />
+//     </div>
+// );
+// }
+
+// export default App;
+
+///now button.component.js
+//import React from 'react';
+// import './button.component.css';
+
+// const Buttoncomponent =(props) => {
+//     const {clickEventHandler} = props;
+//         
+//     return <button onClick={(event)=>{clickEventHandler(event, "hello")}}>Button</button>
+//  }
+// export default ButtonComponent;
+
+//////// styling components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
