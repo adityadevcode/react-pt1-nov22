@@ -29,14 +29,14 @@
 
 // export default HigherOrderComponents;
 
-import React from 'react'
+// import React from 'react'
 
- const HigherOrderComponents = () => {
-  return (
-    <div>HigherOrderComponents</div>
-  )
-}
+//  const HigherOrderComponents = () => {
+//   return (
+//     <div>HigherOrderComponents</div>
+//   )
+// }
 
-export default HigherOrderComponents;
+// export default HigherOrderComponents;
 
 //need to complete hoc taks completely

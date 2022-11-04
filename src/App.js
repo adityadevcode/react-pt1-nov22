@@ -5,7 +5,9 @@
 // import Sample from "./Components/Sample";
 // import FetchApi from "./Components/FetchApi";
 // import ReactFetchapi from "./Components/ReactFetchapi";
-import  HigherOrderComponents from "./Components/HigherOrderComponents";
+// import  HigherOrderComponents from "./Components/HigherOrderComponents";
+import Reactmemo from "./Components/Reactmemo";
+// import MemoTodo from "./Components/MemoTodo";
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
       {/* <Sample /> */}
       {/* <FetchApi /> */}
       {/* <ReactFetchapi/> */}
-      <HigherOrderComponents/>
+      {/* <HigherOrderComponents/> */}
+      <Reactmemo />
+      {/* <MemoTodo/> */}
     </div>
   );
 }
