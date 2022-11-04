@@ -1,9 +1,11 @@
-import React, {useState, useEffect} from "react";
+// import React, {useState, useEffect} from "react";
+// import { HigherOrderComponents } from "./Components/HigherOrderComponents";
 // import Home from "./Components/Home";
 // import Technologies from "./Components/Technologies";
 // import Sample from "./Components/Sample";
 // import FetchApi from "./Components/FetchApi";
-import ReactFetchapi from "./Components/ReactFetchapi";
+// import ReactFetchapi from "./Components/ReactFetchapi";
+import  HigherOrderComponents from "./Components/HigherOrderComponents";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       {/* <Sample name="JavaScript" /> */}
       {/* <Sample /> */}
       {/* <FetchApi /> */}
-      <ReactFetchapi/>
+      {/* <ReactFetchapi/> */}
+      <HigherOrderComponents/>
     </div>
   );
 }
